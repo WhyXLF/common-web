@@ -99,20 +99,11 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.properties</include>
-                    <include>**/*.tld</include>
                     <include>log4j2.xml</include>
-                    <include>**/*.conf</include>
+                    <include>applicationContext.xml</include>
+                    <include>applicationContext-mvc.xml</include>
                 </includes>
                 <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                    <include>*.xls</include>
-                    <include>*.json</include>
-                </includes>
-                <filtering>false</filtering>
             </resource>
             <resource>
                 <directory>src/main/java</directory>
@@ -124,18 +115,16 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
         <pluginManagement>
             <plugins>
+                <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-resources-plugin</artifactId>-->
+                    <!--<version>2.7</version>-->
+                    <!--<configuration>-->
+                        <!--<encoding>UTF-8</encoding>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.3</version>
